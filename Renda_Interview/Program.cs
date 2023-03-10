@@ -17,7 +17,6 @@ namespace Renda_Interview
 
         static int[] RemoveDuplicateFromArray(int[] duplicateArray)
         {
-            //var duplicateArray = new int[]{ 1, 2, 2, 3, 3, 4, 5, 5};
             var responseHashSet = new HashSet<int>();
             if(duplicateArray != null && duplicateArray.Any())
             {
@@ -29,6 +28,11 @@ namespace Renda_Interview
                 }
             }
             return responseHashSet.ToArray();
+        }
+
+        static int ReturnElementWithHightestNumberOfOccurence(int[] values)
+        {
+
         }
     }
 }
