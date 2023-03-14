@@ -10,29 +10,36 @@ namespace Renda_Interview
     {
         static void Main(string[] args)
         {
-            var values = new int[] { 1, 2, 2, 3, 3, 4, 5, 5 };
-            Console.WriteLine(RemoveDuplicateFromArray(values));
+           // var values = new int[] { 1, 2, 2, 3, 3, 4, 5, 5 };
+            var input = new int[10];
+            for (int i = 0; i < input.Length; i++)
+            {
+                input[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            RemoveDuplicateFromArray(input);
+            Console.WriteLine();
             Console.ReadLine();
         }
 
-        static int[] RemoveDuplicateFromArray(int[] duplicateArray)
+        static void RemoveDuplicateFromArray(int[] duplicateArray)
         {
             var responseHashSet = new HashSet<int>();
-            if(duplicateArray != null && duplicateArray.Any())
+            if (duplicateArray != null && duplicateArray.Any())
             {
-                for(int i = 0; i < duplicateArray.Length; i++)
+                for (int i = 0; i < duplicateArray.Length; i++)
                 {
                     var item = duplicateArray[i];
                     responseHashSet.Add(item);
-                    Console.WriteLine(item);
+
                 }
             }
-            return responseHashSet.ToArray();
-        }
-
-        static int ReturnElementWithHightestNumberOfOccurence(int[] values)
-        {
-
+            var result = responseHashSet.ToArray();
+            for(int item = 1; item < result.Length; item++)
+            {
+                //resultArray = resultArray[item];
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
         }
     }
 }
